@@ -4,8 +4,8 @@
   "type": "library",
   "require": {
     "laravel/framework": "^5.6||^6.0",
-    "divineomega/php-cli-progress-bar": "^2.1",
-    "divineomega/php-password-cracker": "^1.1"
+    "jord-jd/php-cli-progress-bar": "^null.0",
+    "jord-jd/php-password-cracker": "^null.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.5"
@@ -19,17 +19,17 @@
   ],
   "autoload": {
     "psr-4": {
-      "DivineOmega\\LaravelPasswordSecurityAudit\\": "src/"
+      "JordJD\\LaravelPasswordSecurityAudit\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "DivineOmega\\LaravelPasswordSecurityAudit\\ServiceProvider"
+        "JordJD\\LaravelPasswordSecurityAudit\\ServiceProvider"
       ]
     },
     "branch-alias": {
-      "dev-master": "2.0-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "replace": {

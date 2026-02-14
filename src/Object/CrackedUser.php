@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\LaravelPasswordSecurityAudit\Objects;
+namespace JordJD\LaravelPasswordSecurityAudit\Objects;
 
 use Illuminate\Contracts\Support\Arrayable;
 

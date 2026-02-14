@@ -1,10 +1,10 @@
 <?php
 
-namespace DivineOmega\LaravelPasswordSecurityAudit\Console\Commands;
+namespace JordJD\LaravelPasswordSecurityAudit\Console\Commands;
 
-use DivineOmega\CliProgressBar\ProgressBar;
-use DivineOmega\LaravelPasswordSecurityAudit\Objects\CrackedUser;
-use DivineOmega\PasswordCracker\Crackers\DictionaryCracker;
+use JordJD\CliProgressBar\ProgressBar;
+use JordJD\LaravelPasswordSecurityAudit\Objects\CrackedUser;
+use JordJD\PasswordCracker\Crackers\DictionaryCracker;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;

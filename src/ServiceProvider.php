@@ -1,8 +1,8 @@
 <?php
 
-namespace DivineOmega\LaravelPasswordSecurityAudit;
+namespace JordJD\LaravelPasswordSecurityAudit;
 
-use DivineOmega\LaravelPasswordSecurityAudit\Console\Commands\PasswordAudit;
+use JordJD\LaravelPasswordSecurityAudit\Console\Commands\PasswordAudit;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
