@@ -12,7 +12,7 @@ To install Laravel Password Security Audit, just run the following command from 
 root of your project.
 
 ```bash
-composer require divineomega/laravel-password-security-audit
+composer require jord-jd/laravel-password-security-audit
 ```
 
 ## Usage
