@@ -2,6 +2,8 @@
 
 This package provides an Artisan command to audit the security of your users' passwords.
 
+Supports Laravel 5.6 through 13 and PHP 7.1.3 through current releases. Audit output hides recovered passwords and hashes by default; use `--show-secrets` only in a controlled terminal when the extra data is genuinely required.
+
 Laravel Password Security Audit works by executing a long running process that checks your users passwords against
 a list of over 10k commonly used weak passwords. When complete, it outputs a report of 
 those users that are affected and the passwords that were found. 
@@ -35,23 +37,20 @@ if available.
 User 1   3.6%   33/560168   ETC: 4h 39m   Elapsed: 6s   ▓░░░░░░░░░░░░░░░░░░░  
 ```
 
-When complete, you will be presented with a table of users with weak passwords.
-For each user, this will include the user's primary key (usually the `id` field), 
-the password found and its associated hash.
+When complete, you will be presented with the primary keys of users with weak passwords. Recovered plaintext passwords and hashes are deliberately hidden because terminal logs are often retained.
 
 ```   
 6 user password(s) were found to be weak.
-+----------+----------+--------------------------------------------------------------+
-| Key (id) | Password | Hash                                                         |
-+----------+----------+--------------------------------------------------------------+
-| 1        | password | $2y$10$v6LjwoJOqumnO2A1VmscD.Tnot0D2koOzpGsmVfZaiWM6zprRpwWi |
-| 2        | secret   | $2y$10$em9DONupJiDO1LMnR2PZZeoTOEyNutx4mGscQiKXWCBr09INUAjj6 |
-| 14       | admin    | $2y$10$Kc.6/37NfY.D.JlSFxhyKexUQoo8dDng37MQDl.jSTtwclt7/ypJO |
-| 43       | test123  | $2y$10$Nli8PgRNgTEZE1D1XuiBwOVdxRJJfkVvnWf7N2.Ko93av1ykC4DJO |
-| 54       | secret   | $2y$10$eq6kcNOFC4bYNBDPHOTtC.EAvrQU3IK1kM5/QpwN3FK7HnxPOjR5e |
-| 68       | secret   | $2y$10$Fvl47D2y0uDEr.6waoXzpeyB2k/.nz1SBlygWP12g8TbMEMxp1E4S |
-+----------+----------+--------------------------------------------------------------+
++----------+
+| Key (id) |
++----------+
+| 1        |
+| 2        |
+| 14       |
++----------+
 ``` 
+
+If sensitive output is required, run `php artisan security:password-audit --show-secrets` interactively and avoid redirecting or retaining its output.
 
 ### Custom user model
 
