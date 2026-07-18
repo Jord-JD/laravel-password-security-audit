@@ -22,6 +22,11 @@ class CrackedUser implements Arrayable
         return $this->key;
     }
 
+    public function toSafeArray()
+    {
+        return ['key' => $this->key];
+    }
+
     public function toArray()
     {
         return [
